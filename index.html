@@ -15,6 +15,8 @@
     <!-- <script src="sw.js"></script> -->
     <script>
         // ServiceWorker登録：https://developers.google.com/web/fundamentals/primers/service-workers/?hl=ja
+        // Service Worker を使うにはまず register()関数を呼びだして登録する
+        // すでに登録されているかどうかはブラウザがチェックしてくれるので気にせず呼べばいい
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js').then(function (registration) {
                 console.log('ServiceWorker registration successful with scope: ', registration.scope);
